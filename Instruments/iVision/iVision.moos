@@ -1,0 +1,38 @@
+//------------------------------------------------------------------
+// iVision configuration block
+
+ProcessConfig = CV
+{
+    AppTick   = 5
+    CommsTick = 10
+
+    // Camera's Angular Resolution (in radians/pixel);
+    AngularRes = 0.0007515387759
+
+    // Boolean value of whether or not to record video.
+    VideoOut = True
+
+    // Path to record data in. (if absent, defaults to ".")
+    Output_Path = .
+
+    //Uncomment the next line to use a video file as your
+    //capture device rather than a camera.
+    //VideoInputFile = 20090813_082532_VIDEO.avi 
+
+    //If using video file input & don't want to start at beginning,
+    //specify offset, in frames, here.
+    //VideoInputOffset = 2000
+
+    //Specify output compression using FourCC. (fourcc.org)
+    //FOURCC_CODEC = DIVX
+
+    //If pipe Following, diameter of pipe (for calculating range), in meters
+    //TargetDiameter = 1.0
+
+    //For processing, downsample the image by this factor (will have a squaring effect)
+    //Downsample = 2
+
+    //Explicitly set threshold level (default = 90)
+    //Threshold = 100
+}
+

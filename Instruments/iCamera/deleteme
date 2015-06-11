@@ -1,0 +1,8 @@
+  CameraDriverDC1394.cpp
+  CameraDriverDC1394.h
+  CameraApp.cpp
+  CameraApp.h
+  iCameraMain.cpp
+  conversions.cpp
+  conversions.h
+

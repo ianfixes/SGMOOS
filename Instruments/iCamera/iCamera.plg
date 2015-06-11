@@ -1,0 +1,29 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: iCamera - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\rdamus\LOCALS~1\Temp\RSP173.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib MOOSLib_RC.lib ws2_32.lib MOOSGenLib_RC.lib bcamapiwtl.lib BvcDibWtl.lib setupapi.lib version.lib /nologo /subsystem:console /incremental:no /pdb:"Release/iCamera.pdb" /machine:I386 /out:"Release/iCamera.exe" /libpath:"./Include" /libpath:"../MOOSBin/ReleaseCamera" 
+.\Release\BaslerCameraDriver.obj
+.\Release\CameraDriver.obj
+.\Release\CameraInstrument.obj
+.\Release\iCameraMain.obj
+.\Release\StdAfx.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\rdamus\LOCALS~1\Temp\RSP173.tmp"
+<h3>Output Window</h3>
+Linking...
+LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /INCREMENTAL:NO specification
+
+
+
+<h3>Results</h3>
+iCamera.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

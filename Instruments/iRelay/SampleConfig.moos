@@ -1,0 +1,13 @@
+
+ProcessConfig = Relay
+{
+        AppTick         = 5
+        CommsTick       = 10
+        Port            = /dev/ttyS0
+        BaudRate        = 9600
+
+        Streaming       = true
+        Verbose         = true
+
+        EnableOnStart   = true
+}

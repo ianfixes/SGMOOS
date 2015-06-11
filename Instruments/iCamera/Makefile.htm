@@ -1,0 +1,61 @@
+# Makefile for iCamera
+#
+#
+#        5/13/04
+#        Robert Damus
+
+NAME = Camera
+
+TARGET = ../MOOSBin/iCamera
+
+LIBS = -lnewmat  -lm  -lpthread -lMOOS -lMOOSGen
+
+INCLUDEDIR  = -I../../thirdparty/  -I. -I../MOOSLIB
+
+LIBDIR = -L../../thirdparty/newmat -L../MOOSLIB -L../MOOSGenLib
+
+CFLAGS = -DDEBUG -g -DUNIX
+
+
+
+
+
+SOURCES =  CameraInstrument.cpp \
+           iCameraMain.cpp \
+			CameraDriver.cpp \
+			BaslerCameraDriver.cpp 
+			
+
+
+OBJECTS =  CameraInstrument.o \
+           iCameraMain.o \
+		   CameraDriver.o \
+			BaslerCameraDriver.o
+			
+
+
+
+
+
+iCamera : $(OBJECTS)
+	g++ -g -o $(TARGET) $(OBJECTS) $(INCLUDEDIR) $(LIBDIR) $(LIBS) $(CFLAGS)
+
+depend :
+	makedepend  $(CFLAGS) $(INCLUDEDIR) $(SOURCES) 
+
+
+.cpp.o :
+	g++ $(CFLAGS) $(INCLUDEDIR) -c -g $*.cpp
+
+#reloc.o : reloc.cpp
+#	g++ -c -O -I$(INCLUDE) reloc.cpp
+
+
+clean : 
+	rm -f *.o *~ cml
+
+
+
+
+
+# DO NOT DELETE THIS LINE -- make depend depends on it.

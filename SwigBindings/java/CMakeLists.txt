@@ -1,0 +1,21 @@
+##########################################
+# This makes Python bindings using SWIG  #
+##########################################
+FIND_PACKAGE(SWIG REQUIRED)
+INCLUDE(${SWIG_USE_FILE})
+
+SET(CMAKE_SWIG_FLAGS "")
+SET(CMAKE_SWIG_OUTDIR ".")
+#SET(CMAKE_SWIG_OUTDIR ${LIBRARY_OUTPUT_PATH}) 
+SET_SOURCE_FILES_PROPERTIES(mooslib_java.i PROPERTIES CPLUSPLUS ON)
+
+
+FIND_PACKAGE(JNI)
+#IF(JNI_FOUND)
+  INCLUDE_DIRECTORIES(${JNI_INCLUDE_DIRS})
+  SWIG_ADD_MODULE(mooslib java mooslib_java.i)
+#  SWIG_LINK_LIBRARIES(mooslib ${JNI_LIBRARIES} MOOS MOOSGen)
+  SWIG_LINK_LIBRARIES(mooslib MOOS MOOSGen)
+#ENDIF(PYTHONLIBS_FOUND)
+
+
